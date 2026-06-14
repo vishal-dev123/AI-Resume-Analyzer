@@ -16,6 +16,17 @@ import io,random
 import plotly.express as px # to create visualisations at the admin session
 import plotly.graph_objects as go
 from geopy.geocoders import Nominatim
+import nltk
+
+try:
+    nltk.data.find('corpora/stopwords')
+except:
+    nltk.download('stopwords')
+
+try:
+    nltk.data.find('tokenizers/punkt')
+except:
+    nltk.download('punkt')
 # libraries used to parse the pdf files
 from pyresparser import ResumeParser
 from pdfminer3.layout import LAParams, LTTextBox
